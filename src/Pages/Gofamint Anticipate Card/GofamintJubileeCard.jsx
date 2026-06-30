@@ -25,6 +25,9 @@ import year from "../../Assets/yearGof.png";
 import cloudUpload from "../../Assets/cloudUpload.png";
 import border from "../../Assets/borderGof.png";
 import logo from "../../Assets/logoGof2.png";
+import gofamintCard from "../../Assets/GOFAMINT-card.png";
+import wedding from "../../Assets/#ABISOL'26 IV.png";
+import birthday from "../../Assets/BIGLOVESQUARE.png";
 import classes from "./GofamintJubileeCard.module.css";
 import heic2any from "heic2any";
 import { Spinner } from "react-bootstrap";
@@ -34,14 +37,17 @@ const creatorWorks = [
   {
     title: "GOFAMINT @ 70 Card Generator",
     description: "A responsive celebration card creator with image upload and one-click download.",
+    image: gofamintCard,
   },
   {
-    title: "E-Procurement Landing Page",
-    description: "A public-service landing page with structured content and clean navigation.",
+    title: "Birthday Flyer",
+    description: "Creative birthday celebration design.",
+    image: birthday,
   },
   {
-    title: "Social Register Dashboard",
-    description: "A data dashboard interface for viewing applications, profiles, and household records.",
+    title: "Wedding IV",
+    description: "Creative wedding IV design.",
+    image: wedding,
   },
 ];
 
@@ -86,6 +92,7 @@ function GofamintJubileeCard() {
   });
   const [previewImage, setPreviewImage] = useState("");
   const [isDownloading, setIsDownloading] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const cardRef = useRef(null);
 
